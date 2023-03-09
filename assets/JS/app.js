@@ -36,9 +36,9 @@ function uppercase(length) {
 
     let count = 0;
 
-    while (count < length){
+    while (count < length) {
         result += uppercase_char.charAt(Math.floor(Math.random() * char_length));
-        count +=1;
+        count += 1;
     }
     return result;
 }
@@ -52,9 +52,9 @@ function lowercase(length) {
 
     let count = 0;
 
-    while (count < length){
+    while (count < length) {
         result += lowercase_char.charAt(Math.floor(Math.random() * char_length));
-        count +=1;
+        count += 1;
     }
     return result;
 }
@@ -69,9 +69,9 @@ function numbercase(length) {
 
     let count = 0;
 
-    while (count < length){
+    while (count < length) {
         result += numbercase_char.charAt(Math.floor(Math.random() * char_length));
-        count +=1;
+        count += 1;
     }
     return result;
 }
@@ -85,16 +85,16 @@ function symbolcase(length) {
 
     let count = 0;
 
-    while (count < length){
+    while (count < length) {
         result += symbolcase_char.charAt(Math.floor(Math.random() * char_length));
-        count +=1;
+        count += 1;
     }
     return result;
 }
 
 
 // for upper and lower case
-function upperlower(length){
+function upperlower(length) {
 
     const upperlower = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 
@@ -102,16 +102,16 @@ function upperlower(length){
 
     let count = 0;
 
-    while (count < length){
+    while (count < length) {
         result += upperlower.charAt(Math.floor(Math.random() * char_length));
-        count +=1;
+        count += 1;
     }
     return result;
 }
 
 
 // for all case
-function allcase(length){
+function allcase(length) {
 
     const allcase_char = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~`!@#$%^&*()-_+=\|<>,./?"
 
@@ -119,15 +119,15 @@ function allcase(length){
 
     let count = 0;
 
-    while (count < length){
+    while (count < length) {
         result += allcase_char.charAt(Math.floor(Math.random() * char_length));
-        count +=1;
+        count += 1;
     }
     return result;
 }
 
 // for upper lower number
-function uplonum(length){
+function uplonum(length) {
 
     const uplonum_char = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
 
@@ -135,16 +135,16 @@ function uplonum(length){
 
     let count = 0;
 
-    while (count < length){
+    while (count < length) {
         result += uplonum_char.charAt(Math.floor(Math.random() * char_length));
-        count +=1;
+        count += 1;
     }
     return result;
 }
 
 // for upper lower symbol
 
-function uplosy(length){
+function uplosy(length) {
 
     const uplosy_char = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz~`!@#$%^&*()-_+=\|<>,./?"
 
@@ -152,15 +152,15 @@ function uplosy(length){
 
     let count = 0;
 
-    while (count < length){
+    while (count < length) {
         result += uplosy_char.charAt(Math.floor(Math.random() * char_length));
-        count +=1;
+        count += 1;
     }
     return result;
 }
 
 
-function upnusy(length){
+function upnusy(length) {
 
     const upnusy_char = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~`!@#$%^&*()-_+=\|<>,./?"
 
@@ -168,14 +168,14 @@ function upnusy(length){
 
     let count = 0;
 
-    while (count < length){
+    while (count < length) {
         result += upnusy_char.charAt(Math.floor(Math.random() * char_length));
-        count +=1;
+        count += 1;
     }
     return result;
 }
 
-function lonusy(length){
+function lonusy(length) {
 
     const lonusy_char = "abcdefghijklmnopqrstuvwxyz0123456789~`!@#$%^&*()-_+=\|<>,./?"
 
@@ -183,67 +183,88 @@ function lonusy(length){
 
     let count = 0;
 
-    while (count < length){
+    while (count < length) {
         result += lonusy_char.charAt(Math.floor(Math.random() * char_length));
-        count +=1;
+        count += 1;
     }
     return result;
 }
 
 
+
 // submit btn
-submit_btn.addEventListener('click', function(e){
-   
+submit_btn.addEventListener('click', function (e) {
+
     validate();
 })
 
 function validate() {
-    
+
     // for all case
-   if((uppercase_checkbox.checked) && (lowercase_checkbox.checked) &&(number_checkbox.checked) && (symbols_checkbox.checked)){
+    if ((uppercase_checkbox.checked) && (lowercase_checkbox.checked) && (number_checkbox.checked) && (symbols_checkbox.checked)) {
 
-    password_input.value = allcase(charLength());
+        password_input.value = allcase(charLength());
 
-   }
+    }
 
-//    for upper lower number
+    //    for upper lower number
 
-   else if((uppercase_checkbox.checked) && (lowercase_checkbox.checked) &&(number_checkbox.checked)){
+    else if ((uppercase_checkbox.checked) && (lowercase_checkbox.checked) && (number_checkbox.checked)) {
 
-    password_input.value = uplonum(charLength());
+        password_input.value = uplonum(charLength());
 
-   }
+    }
 
-//    for upper lower sy
+    //    for upper lower sy
 
-   else if((uppercase_checkbox.checked) && (lowercase_checkbox.checked) && (symbols_checkbox.checked)){
+    else if ((uppercase_checkbox.checked) && (lowercase_checkbox.checked) && (symbols_checkbox.checked)) {
 
-    password_input.value = uplosy(charLength());
-   }
+        password_input.value = uplosy(charLength());
+    }
 
 
-//    for upper number symbol
-   else if((uppercase_checkbox.checked) && (symbols_checkbox.checked) &&(number_checkbox.checked)){
+    //    for upper number symbol
+    else if ((uppercase_checkbox.checked) && (symbols_checkbox.checked) && (number_checkbox.checked)) {
 
-    password_input.value = upnusy(charLength());
+        password_input.value = upnusy(charLength());
 
-   }
+    }
 
-// for lower number symbole
+    // for lower number symbole
 
-else if((lowercase_checkbox.checked) && (symbols_checkbox.checked) &&(number_checkbox.checked)){
+    else if ((lowercase_checkbox.checked) && (symbols_checkbox.checked) && (number_checkbox.checked)) {
 
-    password_input.value = lonusy(charLength());
+        password_input.value = lonusy(charLength());
 
-   }
+    }
 
-//    for upper and lower case
+    //    for upper and lower case
 
-   else if((uppercase_checkbox.checked) && (lowercase_checkbox.checked)){
-    password_input.value = upperlower(charLength());
+    else if ((uppercase_checkbox.checked) && (lowercase_checkbox.checked)) {
 
-   }
-    
-   
+        password_input.value = upperlower(charLength());
+
+    }
+
+    //  for uppercase only
+
+    else if (uppercase_checkbox.checked) {
+
+        password_input.value = uppercase(charLength());
+    }
+
+    // for lowercase only
+
+    else if (lowercase_checkbox.checked) {
+
+        password_input.value = lowercase(charLength());
+    }
+
+    else{
+        alert("the selected option is not a valid password pattern");
+
+        self.location.assign(window.location);
+    }
+
 }
 
