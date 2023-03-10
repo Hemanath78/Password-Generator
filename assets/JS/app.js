@@ -7,14 +7,13 @@ function charLength() {
     return charLength;
 
 }
-
-
 document.getElementById('length').addEventListener('change', charLength);
+
+
 
 let submit_btn = document.getElementById("btn");
 
 let password_input = document.getElementById("password__result");
-
 
 const uppercase_checkbox = document.getElementById("uppercase");
 
@@ -191,13 +190,6 @@ function lonusy(length) {
 }
 
 
-
-// submit btn
-submit_btn.addEventListener('click', function (e) {
-
-    validate();
-})
-
 function validate() {
 
     // for all case
@@ -267,4 +259,13 @@ function validate() {
     }
 
 }
+
+
+// submit btn
+submit_btn.addEventListener('click', function (e) {
+
+    validate();
+});
+
+
 
